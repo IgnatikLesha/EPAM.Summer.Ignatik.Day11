@@ -109,18 +109,18 @@ namespace BinTree
             {
                 if (tnode.LeftChild == null)
                     tnode.LeftChild = new TreeNode();
-                FInsert(data, tnode.LeftChild, tnode);
+                Insert(data, tnode.LeftChild, tnode);
             }
             else
             {
                 if (tnode.RightChild == null) 
                     tnode.RightChild = new TreeNode();
-                FInsert(data, tnode.RightChild, tnode);
+                Insert(data, tnode.RightChild, tnode);
             }
         }
 
 
-        private void FInsert(T data, TreeNode node, TreeNode parent)
+        private void Insert(T data, TreeNode node, TreeNode parent)
         {
  
             if (node.Data == null || node.Data.Equals(data))
@@ -132,12 +132,12 @@ namespace BinTree
             if (comparer.Compare(tnode.Data, data) == -1)
             {
                 if (node.LeftChild == null) node.LeftChild = new TreeNode();
-                FInsert(data, node.LeftChild, node);
+                Insert(data, node.LeftChild, node);
             }
             else
             {
                 if (node.RightChild == null) node.RightChild = new TreeNode();
-                FInsert(data, node.RightChild, node);
+                Insert(data, node.RightChild, node);
             }
         }
 
